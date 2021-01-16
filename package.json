@@ -7,7 +7,11 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "dev:ssr": "ng run Vercel:serve-ssr",
+    "serve:ssr": "node dist/Vercel/server/main.js",
+    "build:ssr": "ng build --prod && ng run Vercel:server:production",
+    "prerender": "ng run Vercel:prerender"
   },
   "private": true,
   "dependencies": {
@@ -19,8 +23,11 @@
     "@angular/forms": "~10.2.4",
     "@angular/platform-browser": "~10.2.4",
     "@angular/platform-browser-dynamic": "~10.2.4",
+    "@angular/platform-server": "~10.2.4",
     "@angular/router": "~10.2.4",
     "@angular/service-worker": "~10.2.4",
+    "@nguniversal/express-engine": "^10.1.0",
+    "express": "^4.15.2",
     "firebase": "^8.2.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
@@ -30,6 +37,8 @@
     "@angular-devkit/build-angular": "~0.1002.1",
     "@angular/cli": "~10.2.1",
     "@angular/compiler-cli": "~10.2.4",
+    "@nguniversal/builders": "^10.1.0",
+    "@types/express": "^4.17.0",
     "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
