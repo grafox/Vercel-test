@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Vercel"
+    }
+  },
+  "defaultProject": "Vercel",
+  "cli": {
+    "analytics": "5739bdd4-2258-4c2d-8c6c-c18be654bf95"
+  }
 }
